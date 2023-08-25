@@ -4,6 +4,7 @@ import StyledContainer from './UI/Container';
 import Button from './UI/Button';
 
 import BanerImg from '../assets/img/Illustration_main_baner.svg';
+import ImgArr from '../assets/img/company_logo';
 
 const StyledSection = styled.section`
     display:flex;
@@ -25,6 +26,19 @@ const StyledSection = styled.section`
         .mainBaner___content__img_baner{
             max-width: 100%;
             height: auto;
+        }
+    }
+
+    .mainBaner___partners_img{
+        margin: 70px 0 0 0;
+        ul{
+            width:100%;
+            display: flex;
+            justify-content:space-between;
+
+            img{
+                filter: grayscale(100%);
+            }
         }
     }
 
@@ -57,9 +71,15 @@ const MainBaner: React.FC = ():JSX.Element => {
                 <img src={BanerImg} alt="" className='mainBaner___content__img_baner'/>
             </StyledContainer>
 
-            <StyledContainer>
+            <StyledContainer className='mainBaner___partners_img'>
                 <ul>
-                    
+                    {
+                        ImgArr.map((item:string, i) => (
+                            <li>
+                                <img src={item} alt={`img${i}`} />
+                            </li>
+                        ))
+                    }
                 </ul>
             </StyledContainer>
 

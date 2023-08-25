@@ -11,7 +11,7 @@ import {
 } from '../../assets/icons';
 
 interface iconProps {
-    icon: IconType; 
+    icon: IconType,
     width: number | string,
     height?: number | string,
     as?: 'a' | 'div' | 'button',
