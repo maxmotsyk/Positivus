@@ -14,7 +14,7 @@ interface cardProps {
 
 const StyledServicesCard = styled.div<cardProps>`
     padding:50px;
-    max-width:600px;
+    width:100%;
     display:flex;
     align-items:center;
     justify-content:space-between;
