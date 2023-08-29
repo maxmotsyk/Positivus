@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import MainBaner from './MainBaner';
 import Services from './Services';
 import CaseStudies from './CaseStudies';
+import WorkingProcess from './WorkingProcess';
 
 const StyledMain = styled.main`
     margin: 70px 0 0 0;
@@ -19,6 +20,7 @@ const Main: React.FC = ()=> {
             <MainBaner/>
             <Services/>
             <CaseStudies/>
+            <WorkingProcess/>
         </StyledMain>
     )
 
