@@ -5,6 +5,8 @@ import Title from './UI/Title';
 import Button from './UI/Button';
 import StyledContainer from './UI/Container';
 
+import { teamMember, TeamsMember as PropsTeamCard} from '../assets/data';
+
 const StyledSection = styled.section`
     margin:140px 0 0 0;
 
@@ -12,7 +14,11 @@ const StyledSection = styled.section`
         margin:80px 0 0 0;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(340px, 380px));
-        gap:40px;
+        gap:50px;
+    }
+
+    .moreBt{
+        margin: 40px 0 0 auto;
     }
 
 `
@@ -24,8 +30,20 @@ const Team: React.FC = () => {
             <Title text={'Team'} 
                     description={'Meet the skilled and experienced team behind our successful digital marketing strategies'}/>
             <StyledContainer className='card_col'>
-                <TeamCard/>
+                {
+                    teamMember.map(({fullName, linkedin, jobPost, description, img}, i) => (
+                        <TeamCard 
+                            key={i}
+                            fullName={fullName} 
+                            linkedin={linkedin} 
+                            jobPost={jobPost} 
+                            description={description} 
+                            img={img}/>
+                    ))
+                }
             </StyledContainer>
+
+            <Button type={'mainBt'} className='moreBt' children={'See all team'} width='269px' height='68px'/>
         </StyledSection>
     )
     
@@ -72,16 +90,16 @@ const StyledCard = styled.div`
 
 `
 
-const TeamCard: React.FC = () => {
+const TeamCard: React.FC<PropsTeamCard> = ({fullName, linkedin, jobPost, description, img}) => {
 
     return( 
         <StyledCard>
             <div className="head_contetn">
-                <img src="" alt="" />
+                <img src={img} alt="" />
 
                 <div className="info_text">
-                    <h4>Sarah Kim</h4>
-                    <p>Content Creator</p>
+                    <h4>{fullName}</h4>
+                    <p>{jobPost}</p>
                 </div>
 
                 <StyledIcon
@@ -90,18 +108,12 @@ const TeamCard: React.FC = () => {
                     width='34px' 
                     height='34px'
                     className='card_icon'
+                    href={linkedin}
                 />
             </div>
 
             <div className="description_col">
-                <p>
-                    4+ years of experience in 
-                    social media marketing. 
-                    Proficient in creating 
-                    and scheduling content, 
-                    analyzing metrics, and 
-                    building engagement
-                </p>
+                <p>{description}</p>
             </div>
         </StyledCard>
     )

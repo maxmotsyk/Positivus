@@ -4,7 +4,7 @@ import Title from './UI/Title';
 import StyledContainer from './UI/Container';
 import ProcessCard from './UI/ProcessCard';
 
-import processData from '../assets/data/processData';
+import {processData} from '../assets/data';
 
 const StyledWorkingProcess = styled.section`
     margin:140px 0 0 0 ;
