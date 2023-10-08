@@ -2,6 +2,7 @@ import GlobalStyle from "../assets/styles/global-styles";
 import styled from "styled-components";
 import Header from "../components/Header"
 import Main from "../components/Main";
+import Footer from "../components/Footer";
 
 const StyledWrapper = styled.div`
     position: relative;
@@ -20,6 +21,7 @@ function App() {
       <StyledWrapper>
         <Header/>
         <Main/>
+        <Footer/>
       </StyledWrapper>
     </>
   

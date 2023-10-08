@@ -61,7 +61,7 @@ const Header: React.FC = () => {
                 </li>
             </nav>
 
-            <Button as='a' type='skeletonBt' children='Request a quote' width='231px' height='68px'/>
+            <Button as='a' type='skeletonBt' text='Request a quote' width='231px' height='68px'/>
         </StyledHeader>
     )
 

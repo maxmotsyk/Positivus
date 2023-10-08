@@ -42,6 +42,7 @@ const GlobalStyle = createGlobalStyle`
 
   input, a, button, textarea, select {
     font-family: 'Space Grotesk', sans-serif;
+    margin:0;
   }
 
   a {

@@ -5,6 +5,8 @@ import Services from './Services';
 import CaseStudies from './CaseStudies';
 import WorkingProcess from './WorkingProcess';
 import Team from './Team';
+import ContactUs from './ContactUs';
+import Testimonials from './Testimonials';
 
 const StyledMain = styled.main`
     margin: 70px 0 0 0;
@@ -23,6 +25,8 @@ const Main: React.FC = ()=> {
             <CaseStudies/>
             <WorkingProcess/>
             <Team/>
+            <Testimonials/>
+            <ContactUs/>
         </StyledMain>
     )
 

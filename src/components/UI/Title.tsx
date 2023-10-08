@@ -7,15 +7,21 @@ interface titleProps{
     className?:string;
 }
 
-const StyledTitle = styled.div`
+interface styleTitleProps {
+    maxWidth?: string
+}
+
+const StyledTitle = styled.div<styleTitleProps>`
     display: flex;
     align-items: center;
+    max-width: ${({maxWidth}) => maxWidth|| 'none'};
 
     h2{
         width:fit-content;
         background-color: #B9FF66;
         padding:0 7px;
         border-radius: 7px;
+        white-space:nowrap
     }
 
     p{ 
@@ -26,10 +32,10 @@ const StyledTitle = styled.div`
 
 `
 
-const Title:React.FC<titleProps> = ({text, description, className}) => {
+const Title:React.FC<titleProps & styleTitleProps> = ({text, description, className, maxWidth}) => {
 
     return(
-        <StyledTitle className = {className}>
+        <StyledTitle maxWidth={maxWidth} className = {className}>
             <h2>{text}</h2>
             <p>{description}</p>
         </StyledTitle>

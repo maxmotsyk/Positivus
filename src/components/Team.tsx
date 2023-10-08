@@ -43,7 +43,7 @@ const Team: React.FC = () => {
                 }
             </StyledContainer>
 
-            <Button type={'mainBt'} className='moreBt' children={'See all team'} width='269px' height='68px'/>
+            <Button type={'mainBt'} className='moreBt' text={'See all team'} width='269px' height='68px'/>
         </StyledSection>
     )
     

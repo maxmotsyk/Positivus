@@ -12,7 +12,9 @@ interface buttonProps {
     backgroundColor?: string,
     disabled?: boolean,
     href?: string,
-    children:string,
+    text:string,
+    padding?: string
+    onClick?: () => void
 }
 
 const StyledButton = styled.button<buttonProps>`
@@ -22,7 +24,7 @@ const StyledButton = styled.button<buttonProps>`
     width: 100%;
     height: ${({height}) => height || '50px'};
     max-width: ${({width})=>  width || '250px'};
-    padding: 0 0 0 0;
+    padding:${({padding}) => padding || '0 0 0 0'};
     border-radius: 14px;
     border: none;
     background-color: ${({backgroundColor}) => backgroundColor || '#ffff'};
@@ -54,7 +56,7 @@ const StyledButton = styled.button<buttonProps>`
 const Button: React.FC<buttonProps> = (props) =>{
 
     return <StyledButton {...props}>
-                {props.children}
+                {props.text}
             </StyledButton>
 
 }

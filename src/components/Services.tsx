@@ -114,7 +114,7 @@ const Services: React.FC = () => {
                         width='288px'
                         height='68px'
                         type={'mainBt'} 
-                        children={'Get your free proposal'}/>
+                        text={'Get your free proposal'}/>
                 </div>
 
                 <div className="services___contact_col__img">

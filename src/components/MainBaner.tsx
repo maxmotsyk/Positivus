@@ -64,7 +64,7 @@ const MainBaner: React.FC = ():JSX.Element => {
                     <Button width='264px' 
                             height='68px' 
                             type='mainBt' 
-                            children='Book a consultation'
+                            text='Book a consultation'
                     />
                 </div>
 
