@@ -5,6 +5,7 @@ import Main from "../components/Main";
 import Footer from "../components/Footer";
 
 const StyledWrapper = styled.div`
+    padding:0 15px;
     position: relative;
     min-height: 100vh;
     width: 100%;

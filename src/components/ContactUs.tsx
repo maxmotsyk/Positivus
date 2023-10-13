@@ -101,6 +101,7 @@ const StyledSection = styled.section`
                             top:6px;
                             width:16px;
                             height:16px;
+                            transition:0.3s all;
                         }
 
                         &:before{

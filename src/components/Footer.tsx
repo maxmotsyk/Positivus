@@ -53,6 +53,8 @@ const StyledFooter = styled.footer`
                 li{
                     a{
                         color:#ffff;
+                        text-decoration: underline;
+                        text-underline-offset: 3px;
                     }
 
                     &:not(:last-of-type){
@@ -140,9 +142,18 @@ const StyledFooter = styled.footer`
         }
 
         .ownership_text{
+            display:flex;
+            align-items: center;
             margin:50px 0 0 0;
-            p{
+
+            p,a{
                 color: #fff;
+            }
+
+            a{
+                margin:0 0 0 40px;
+                text-decoration: underline;
+                text-underline-offset: 3px;
             }
         }
 
@@ -256,6 +267,7 @@ const Footer: React.FC = () => {
 
                 <div className="ownership_text">
                     <p>© 2023 Positivus. All Rights Reserved.</p>
+                    <a href="#">Privacy Policy</a>
                 </div>
 
             </StyledContainer>

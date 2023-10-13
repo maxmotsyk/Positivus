@@ -78,6 +78,12 @@ const StyledCard = styled.div`
             position:absolute;
             top: 0;
             right: 0;
+            transition:0.3s all;
+
+            &:hover{
+                opacity:0.8;
+            }
+
         }
         
     }

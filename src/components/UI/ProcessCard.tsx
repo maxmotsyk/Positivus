@@ -21,6 +21,7 @@ const StyledProcessCard = styled.div<{openTriger:boolean}>`
     border: 1px solid #191A23;
     box-shadow: 0px 5px 0px 0px #191A23;
     transition: 0.3s all;
+    cursor:pointer;
 
     .title_col{
         display:flex;

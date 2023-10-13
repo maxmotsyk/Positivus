@@ -24,7 +24,8 @@ const StyledSection = styled.section`
         }
 
         .mainBaner___content__img_baner{
-            max-width: 100%;
+            max-width: 600px;
+            width:50%;
             height: auto;
         }
     }

@@ -17,8 +17,8 @@ const StyledSection  = styled.section`
     .services___cards_col{
         margin:90px 0 0 0;
         display:grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 580px));
-        gap:50px;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 600px));
+        gap:40px;
     }
 
     .services___contact_col{
